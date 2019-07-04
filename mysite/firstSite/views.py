@@ -16,8 +16,7 @@ def index(request):
     sugestions_list = Suggest.objects.all()
     context = {
         'mensagem': mensagem,
-        'sugestions_list':sugestions_list
-
+        'sugestions_list': sugestions_list
     }
     return HttpResponse(template.render(context, request))
 

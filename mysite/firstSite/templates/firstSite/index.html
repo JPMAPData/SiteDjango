@@ -5,10 +5,11 @@
     <title>Titulo</title>
 </head>
 <body>
-    <h1>{% mensagem %}</h1>
+    <h1>{{mensagem}}</h1>
+    <h2>SUGESTÕES ABAIXO!</h2>
     <ul>
         {% for sug in sugestions_list %}
-            <li><a href="/firstSite/{{sug.url}}/">{{sug.name}}</a></li>
+            <li><a href="{{sug.url}}">{{sug.nome}}</a></li>
         {% endfor %}
     </ul>
 </body>
