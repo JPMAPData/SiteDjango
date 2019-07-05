@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Titulo</title>
+    <title>Bora Carol</title>
     <style>
       body{
           background-image: linear-gradient(ghostwhite, white);
@@ -38,12 +38,13 @@
             left: 0; right: 0;
             margin: auto;
       }
-      </style>
+
+    </style>
 </head>
 <body>
     <div>
         <h1>{{mensagem}}</h1>
-        <h3 >Se liga nas opções:</h3>
+        <h3 >Olha o que a gente pode fazer:</h3>
         <ul class="list-group align middle">
             {% for sug in sugestions_list %}
                 <li><a href="{{sug.url}}" class="list-group-item list-group-item-action" style="">{{sug.nome}}</a></li>
