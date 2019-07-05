@@ -11,7 +11,7 @@ def index(request):
     dias = foco.tm_yday - agora.tm_yday - 1
     horas = 23 - agora.tm_hour
     minutos = 60 - agora.tm_min
-    mensagem = 'Faltam ' + str(dias) + ' dias, ' + str(horas) + ' horas e ' + str(minutos) + ' minutos!'
+    mensagem = 'Bora, Carol! Faltam só mais ' + str(dias) + ' dias, ' + str(horas) + ' horas e ' + str(minutos) + ' minutos!'
     template = loader.get_template('firstSite/index.html')
     sugestions_list = Suggest.objects.all()
     context = {

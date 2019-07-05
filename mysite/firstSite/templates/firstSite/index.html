@@ -3,14 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Titulo</title>
+    <style>
+      body{
+          background-image: linear-gradient(ghostwhite, white);
+          background-repeat: no-repeat;
+          width:100%;
+          height: 80vh;
+      }
+      p, h2, h3, li{
+          font-family: "Brush Script MT";
+          font-size: x-large;
+          text-align:center;
+      }
+      h1{
+          font-family: "Brush Script MT";
+          font-size: xx-large;
+          text-align:center;
+      }
+      a{
+          font-family: Calibri;
+          font-size: large;
+          text-align:center;
+      }
+      div{
+          position: absolute;
+            top: 30%; bottom: 0;
+            left: 0; right: 0;
+            margin: auto;
+      }
+      </style>
 </head>
 <body>
-    <h1>{{mensagem}}</h1>
-    <h2>SUGESTÕES ABAIXO!</h2>
-    <ul>
-        {% for sug in sugestions_list %}
-            <li><a href="{{sug.url}}">{{sug.nome}}</a></li>
-        {% endfor %}
-    </ul>
+    <div>
+        <h1>{{mensagem}}</h1>
+        <h3 >Se liga nas opções:</h3>
+        <ul class="list-group align middle">
+            {% for sug in sugestions_list %}
+                <li><a href="{{sug.url}}" class="list-group-item list-group-item-action" style="">{{sug.nome}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
 </body>
 </html>
